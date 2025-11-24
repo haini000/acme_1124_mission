@@ -298,21 +298,22 @@ form input[type="submit"]{
     margin:27px 0;
 }
 
-#btt {
+#btt{
     width: 40px;
     height: 40px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,.8);
     color: #fff;
     position: fixed;
-    right: 50%;
-    bottom: 50%;
+    right: 50px;
+    bottom: 50px;
     display: flex;
+    justify-content: center;
     align-items: center;
     visibility: hidden;
     opacity: 0;
 }
 
-#btt.active {
+#btt.active{
     opacity: 1;
     visibility: visible;
 }
