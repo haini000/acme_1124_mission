@@ -79,16 +79,40 @@ nav li:first-child span{
 }
 .testimonial{
     position: relative;
+    overflow: hidden;
+    height: 300px;
 }
+
+.testimonial .slide-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    transition: left .3s ease-in;
+}
+
+.slide-container > li {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
 .testimonial blockquote{
+    position: absolute;
     width: 730px;
-    margin:0 auto;
     font-style: italic;
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
-    text-align: center;
     color: #489DCD;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
 }
 .testimonial blockquote cite{
     margin-top: 27px;
@@ -107,6 +131,17 @@ nav li:first-child span{
 .controls span:hover{
     color: #2c2c2c;
 }
+
+.testimonial>li blockquote > * {
+    opacity: 0;
+    transition: opacity -.2s -.4s ease-in-out;
+}
+
+.testimonial>li.active blockquote > *  {
+    opacity: 1;
+}
+
+
 .testimonial .prev{
     left: 0;
 }
